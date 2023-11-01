@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>website</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+        * {
+            padding: 0;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+        }
+
+        body {
+            background-image: url(blue.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 101%;
+            margin: -1px 0px 0px -1px;
+            object-fit: cover;
+            padding: 0px;
+            /* position: absolute; */
+            width: 101%;
+            background-attachment: fixed;
+
+        }
+
+        .navbar {
+            background-color: black;
+            width: 100vw;
+            height: auto;
+            position: fixed;
+            top: 0;
+        }
+
+        ul {
+            display: flex;
+        }
+
+        ul li {
+            list-style: none;
+            padding: 2vw;
+            margin: 3px;
+            color: white;
+        }
+
+        ul li:hover {
+            list-style: none;
+            padding: 2vw;
+            margin: 3px;
+            color: rgb(167, 18, 18);
+        }
+
+        .searchbar {
+            float: right;
+            padding: 27px;
+        }
+
+        #typeinput {
+            border-radius: 0.30rem;
+            border: 2px solid white;
+            background: transparent;
+            text-transform: capitalize;
+            padding: 2px;
+            color: white;
+        }
+
+        .signup{
+            border: 2pxsolid red;
+            display:flexbox;
+            align-items: center;
+        }
+
+        .btn {
+            border-radius: 0.30rem;
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+            padding: 2px;
+        }
+
+        #typeinput:hover {
+            background-color: transparent;
+            transform: scale(0.95);
+            transition: transform 0.10s;
+            color: white;
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            transform: scale(0.95);
+            transition: transform 0.10s;
+            color: white;
+        }
+
+        .navbtn:hover {
+            background-color: white;
+            border: 2px solid gray;
+            padding: 10ppx;
+            transform: scale(0.95);
+            transition: transform 0.10s;
+            color: black;
+            box-shadow: 2px 10px 2px gray;
+        }
+
+        /* section */
+        .box1 {
+            background-color: rgb(130, 146, 146);
+            margin: 100px auto;
+            width: 60%;
+            padding: 22px;
+            border: 3px solid white;
+            box-shadow: 5px 15px 5px black;
+            color: #000;
+            border-radius: 10px;
+        }
+
+        #contentimg {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            margin: auto;
+            border: 2px solid gray;
+        }
+
+        .img:hover {
+            opacity: 0.10;
+        }
+
+        h2 {
+            text-transform: none;
+        }
+
+        .box1:hover {
+            /* transform: scale(0.95);
+            transition: transform 0.2s; */
+            background-color: white;
+            border-radius: 1rem;
+        }
+
+        /* logo set in links */
+        .logo1 {
+            width: 17vw;
+            /* padding: 100px; */
+            margin: 10px;
+            box-sizing: border-box;
+            /* border: 2px solid red; */
+        }
+
+        .logo2 {
+            width: 17vw;
+            /* padding: 100px; */
+            box-sizing: border-box;
+            margin: 10px;
+            /* border: 2px solid rgb(0, 0, 0); */
+        }
+
+        #logo {
+            width: 2vw;
+            margin: 2px;
+        }
+
+        #logoimg {
+            width: 2vw;
+            margin: 2px
+        }
+
+        .logo1 a {
+            color: #000;
+            padding: 1px;
+            margin: 1px;
+
+        }
+
+        .logo2 a {
+            color: #000;
+
+        }
+
+        /* footer website */
+
+        .footweb {
+            width: 100%;
+            /* position: fixed; */
+            bottom: 0;
+            left: 0;
+            background: #111;
+        }
+
+        footer .content {
+            max-width: 1350px;
+            margin: auto;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        footer .content p,
+        a {
+            color: #fff;
+        }
+
+        footer .content .box {
+            width: 33%;
+            transition: all 0.4s ease;
+        }
+
+        footer .content .topic {
+            font-size: 22px;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 16px;
+
+        }
+
+        footer .content p {
+            text-align: justify;
+        }
+
+        footer .content .lower .topic {
+            margin: 24px 0 5px 0;
+        }
+
+        footer .content .lower i {
+            padding-right: 16px;
+        }
+
+        footer .content .middle {
+            padding-left: 80px;
+        }
+
+        footer .content .middle a {
+            line-height: 32px;
+        }
+
+        footer .content .right input[type="text"] {
+            height: 45px;
+            width: 100%;
+            outline: none;
+            color: #d9d9d9;
+            background: #000;
+            border-radius: 5px;
+            padding-left: 10px;
+            font-size: 17px;
+            border: 2px solid #222222;
+        }
+
+        footer .content .right input[type="submit"] {
+            height: 42px;
+            width: 100%;
+            font-size: 18px;
+            color: #d9d9d9;
+            background: #eb2f06;
+            outline: none;
+            border-radius: 5px;
+            letter-spacing: 1px;
+            cursor: pointer;
+            margin-top: 12px;
+            border: 2px solid #eb2f06;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .content .right input[type="submit"]:hover {
+            background: none;
+            color: #eb2f06;
+        }
+
+        footer .content .media-icons a {
+            font-size: 16px;
+            height: 45px;
+            width: 45px;
+            display: inline-block;
+            text-align: center;
+            line-height: 43px;
+            border-radius: 5px;
+            border: 2px solid #222222;
+            margin: 30px 5px 0 0;
+            transition: all 0.3s ease;
+        }
+
+        .content .media-icons a:hover {
+            border-color: #eb2f06;
+        }
+
+        footer .bottom {
+            width: 100%;
+            text-align: right;
+            color: #d9d9d9;
+            padding: 0 40px 5px 0;
+        }
+
+        footer .bottom a {
+            color: #eb2f06;
+        }
+
+        footer a {
+            transition: all 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #eb2f06;
+        }
+
+        @media (max-width:1100px) {
+            footer .content .middle {
+                padding-left: 50px;
+            }
+        }
+
+        @media (max-width:950px) {
+            footer .content .box {
+                width: 50%;
+            }
+
+            .content .right {
+                margin-top: 40px;
+            }
+        }
+
+        @media (max-width:560px) {
+            footer {
+                position: relative;
+            }
+
+            footer .content .box {
+                width: 100%;
+                margin-top: 30px;
+            }
+
+            footer .content .middle {
+                padding-left: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="searchbar">
+                <input type="text" name="search" placeholder="search any" id="typeinput">
+                <button class="btn">Search</button>
+            </div>
+
+            <!-- <div class="signup">
+                <li><a href="logpage.html">Signup</a></li>
+            </div> -->
+
+            <ul>
+                <li class="navbtn">Home</li>
+                <!-- <button class="dropdownbtn">button 
+                     <i class="dropbtn"></i>
+                </button> -->
+                <li class="navbtn">Services</li>
+                <li class="navbtn">Help</li>
+                <li class="navbtn">About Us</li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+
+        <div class="box1">
+            <h2>Pm Narindra Modi</h2>
+            <img src="modi.png" alt="img" id="contentimg">
+            <br>
+            <p>As of my last update in January 2022, Narendra Modi was the Prime Minister of India. He has been serving
+                as the 14th Prime Minister of the country since May 2014. Modi is a member of the Bharatiya Janata Party
+                (BJP) and the Rashtriya Swayamsevak Sangh (RSS), a right-wing Hindu nationalist paramilitary volunteer
+                organization.
+                During his tenure, Modi's government implemented several</p>
+            <br>
+            <h3>Ask Questions People:</h3>
+            <br>
+            <details>
+                <summary>When and where was Prime Minister Modi born?</summary>
+                <p>Narendra Modi, in full Narendra Damodardas Modi, (born September 17, 1950, Vadnagar, India), Indian
+                    politician and government official who rose to become a senior leader of the Bharatiya Janata Party
+                    (BJP). In 2014 he led his party to victory in elections to the Lok Sabha (lower chamber of the
+                    Indian parliament), after which he was sworn in as prime minister of India. Prior to that he had
+                    served (2001–14) as chief minister (head of government) of Gujarat state in western India.</p>
+            </details>
+            <details>
+                <summary>What is Full Mame Of Modi?</summary>
+                <p>Narendra Damodardas Modi.</p>
+            </details>
+            <br>
+            <details>
+                <summary>Pm modi mother name?</summary>
+                <p>Indian Prime Minister Narendra Modi's mother Heeraben Modi has been cremated after she died in the
+                    early hours of the morning. She was 99 years old, and had been in hospital in western Gujarat state
+                    - where she lived - since Wednesday after her health deteriorated.</p>
+            </details>
+            <div class="logo1">
+                <img id="logo" src="insta.png" alt="logo">
+                <a href="https://www.instagram.com/narendramodi/feed/?hl=en" target="_blank">Go to instagram </a>
+            </div>
+            <div class="logo2">
+                <img id="logoimg" src="twitter.jpg" alt="logo">
+                <a href="https://x.com/narendramodi?s=20" target="_blank">Go to twitter</a>
+            </div>
+            <div class="logo2">
+                <img id="logoimg" src="wikilogo.png" alt="logo">
+                <a href="https://en.wikipedia.org/wiki/Narendra_Modi" target="_blank">Check Wikipedia</a>
+            </div>
+            <div class="address">
+                <h3>CONTACT DETAILS</h3>
+                <p class="add">
+                    South Block, Raisina Hill
+                    New Delhi-110011
+                    <br>
+                    Phone No:+91-11-23012312
+                    <br>
+                    Fax:+91-11-23019545,23016857
+                </p>
+                <span class="contactemail">Email: connect@mygov.nic.in</span>
+                <br>
+                <span class="contactemail">Email: narendramodi1234@gmail.com</span>
+            </div>
+        </div>
+        <div class="box1">
+            <h2>Pm Narindra Modi</h2>
+            <img src="modi.png" alt="img" id="contentimg">
+            <br>
+            <p>As of my last update in January 2022, Narendra Modi was the Prime Minister of India. He has been serving
+                as the 14th Prime Minister of the country since May 2014. Modi is a member of the Bharatiya Janata Party
+                (BJP) and the Rashtriya Swayamsevak Sangh (RSS), a right-wing Hindu nationalist paramilitary volunteer
+                organization.
+                During his tenure, Modi's government implemented several</p>
+            <br>
+            <h3>Ask Questions People:</h3>
+            <br>
+            <details>
+                <summary>When and where was Prime Minister Modi born?</summary>
+                <p>Narendra Modi, in full Narendra Damodardas Modi, (born September 17, 1950, Vadnagar, India), Indian
+                    politician and government official who rose to become a senior leader of the Bharatiya Janata Party
+                    (BJP). In 2014 he led his party to victory in elections to the Lok Sabha (lower chamber of the
+                    Indian parliament), after which he was sworn in as prime minister of India. Prior to that he had
+                    served (2001–14) as chief minister (head of government) of Gujarat state in western India.</p>
+            </details>
+            <details>
+                <summary>What is Full Mame Of Modi?</summary>
+                <p>Narendra Damodardas Modi.</p>
+            </details>
+            <br>
+            <details>
+                <summary>Pm modi mother name?</summary>
+                <p>Indian Prime Minister Narendra Modi's mother Heeraben Modi has been cremated after she died in the
+                    early hours of the morning. She was 99 years old, and had been in hospital in western Gujarat state
+                    - where she lived - since Wednesday after her health deteriorated.</p>
+            </details>
+            <div class="logo1">
+                <img id="logo" src="insta.png" alt="logo">
+                <a href="https://www.instagram.com/narendramodi/feed/?hl=en" target="_blank">Go to instagram </a>
+            </div>
+            <div class="logo2">
+                <img id="logoimg" src="twitter.jpg" alt="logo">
+                <a href="https://x.com/narendramodi?s=20" target="_blank">Go to twitter</a>
+            </div>
+            <div class="logo2">
+                <img id="logoimg" src="wikilogo.png" alt="logo">
+                <a href="https://en.wikipedia.org/wiki/Narendra_Modi" target="_blank">Check Wikipedia</a>
+            </div>
+            <div class="address">
+                <h3>CONTACT DETAILS</h3>
+                <p class="add">
+                    South Block, Raisina Hill
+                    New Delhi-110011
+                    <br>
+                    Phone No:+91-11-23012312
+                    <br>
+                    Fax:+91-11-23019545,23016857
+                </p>
+                <span class="contactemail">Email: connect@mygov.nic.in</span>
+                <br>
+                <span class="contactemail">Email: narendramodi1234@gmail.com</span>
+            </div>
+        </div>
+        <div class="box1">
+            <h2>Pm Narindra Modi</h2>
+            <img src="modi.png" alt="img" id="contentimg">
+            <br>
+            <p>As of my last update in January 2022, Narendra Modi was the Prime Minister of India. He has been serving
+                as the 14th Prime Minister of the country since May 2014. Modi is a member of the Bharatiya Janata Party
+                (BJP) and the Rashtriya Swayamsevak Sangh (RSS), a right-wing Hindu nationalist paramilitary volunteer
+                organization.
+                During his tenure, Modi's government implemented several</p>
+            <br>
+            <h3>Ask Questions People:</h3>
+            <br>
+            <details>
+                <summary>When and where was Prime Minister Modi born?</summary>
+                <p>Narendra Modi, in full Narendra Damodardas Modi, (born September 17, 1950, Vadnagar, India), Indian
+                    politician and government official who rose to become a senior leader of the Bharatiya Janata Party
+                    (BJP). In 2014 he led his party to victory in elections to the Lok Sabha (lower chamber of the
+                    Indian parliament), after which he was sworn in as prime minister of India. Prior to that he had
+                    served (2001–14) as chief minister (head of government) of Gujarat state in western India.</p>
+            </details>
+            <details>
+                <summary>What is Full Mame Of Modi?</summary>
+                <p>Narendra Damodardas Modi.</p>
+            </details>
+            <br>
+            <details>
+                <summary>Pm modi mother name?</summary>
+                <p>Indian Prime Minister Narendra Modi's mother Heeraben Modi has been cremated after she died in the
+                    early hours of the morning. She was 99 years old, and had been in hospital in western Gujarat state
+                    - where she lived - since Wednesday after her health deteriorated.</p>
+            </details>
+            <div class="logo1">
+                <img id="logo" src="insta.png" alt="logo">
+                <a href="https://www.instagram.com/narendramodi/feed/?hl=en" target="_blank">Go to instagram </a>
+            </div>
+            <div class="logo2">
+                <img id="logoimg" src="twitter.jpg" alt="logo">
+                <a href="https://x.com/narendramodi?s=20" target="_blank">Go to twitter</a>
+            </div>
+            <div class="logo2">
+                <img id="logoimg" src="wikilogo.png" alt="logo">
+                <a href="https://en.wikipedia.org/wiki/Narendra_Modi" target="_blank">Check Wikipedia</a>
+            </div>
+            <div class="address">
+                <h3>CONTACT DETAILS</h3>
+                <p class="add">
+                    South Block, Raisina Hill
+                    New Delhi-110011
+                    <br>
+                    Phone No:+91-11-23012312
+                    <br>
+                    Fax:+91-11-23019545,23016857
+                </p>
+                <span class="contactemail">Email: connect@mygov.nic.in</span>
+                <br>
+                <span class="contactemail">Email: narendramodi1234@gmail.com</span>
+            </div>
+        </div>
+        <div class="box1">
+            <h2>Pm Narindra Modi</h2>
+            <img src="modi.png" alt="img" id="contentimg">
+            <br>
+            <p>As of my last update in January 2022, Narendra Modi was the Prime Minister of India. He has been serving
+                as the 14th Prime Minister of the country since May 2014. Modi is a member of the Bharatiya Janata Party
+                (BJP) and the Rashtriya Swayamsevak Sangh (RSS), a right-wing Hindu nationalist paramilitary volunteer
+                organization.
+                During his tenure, Modi's government implemented several</p>
+            <br>
+            <h3>Ask Questions People:</h3>
+            <br>
+            <details>
+                <summary>When and where was Prime Minister Modi born?</summary>
+                <p>Narendra Modi, in full Narendra Damodardas Modi, (born September 17, 1950, Vadnagar, India), Indian
+                    politician and government official who rose to become a senior leader of the Bharatiya Janata Party
+                    (BJP). In 2014 he led his party to victory in elections to the Lok Sabha (lower chamber of the
+                    Indian parliament), after which he was sworn in as prime minister of India. Prior to that he had
+                    served (2001–14) as chief minister (head of government) of Gujarat state in western India.</p>
+            </details>
+            <details>
+                <summary>What is Full Mame Of Modi?</summary>
+                <p>Narendra Damodardas Modi.</p>
+            </details>
+            <br>
+            <details>
+                <summary>Pm modi mother name?</summary>
+                <p>Indian Prime Minister Narendra Modi's mother Heeraben Modi has been cremated after she died in the
+                    early hours of the morning. She was 99 years old, and had been in hospital in western Gujarat state
+                    - where she lived - since Wednesday after her health deteriorated.</p>
+            </details>
+            <div class="logo1">
+                <img id="logo" src="insta.png" alt="logo">
+                <a href="https://www.instagram.com/narendramodi/feed/?hl=en" target="_blank">Go to instagram </a>
+            </div>
+            <div class="logo2">
+                <img id="logoimg" src="twitter.jpg" alt="logo">
+                <a href="https://x.com/narendramodi?s=20" target="_blank">Go to twitter</a>
+            </div>
+            <div class="logo2">
+                <img id="logoimg" src="wikilogo.png" alt="logo">
+                <a href="https://en.wikipedia.org/wiki/Narendra_Modi" target="_blank">Check Wikipedia</a>
+            </div>
+            <div class="address">
+                <h3>CONTACT DETAILS</h3>
+                <p class="add">
+                    South Block, Raisina Hill
+                    New Delhi-110011
+                    <br>
+                    Phone No:+91-11-23012312
+                    <br>
+                    Fax:+91-11-23019545,23016857
+                </p>
+                <span class="contactemail">Email: connect@mygov.nic.in</span>
+                <br>
+                <span class="contactemail">Email: narendramodi1234@gmail.com</span>
+            </div>
+        </div>
+        <div class="box1">
+            <h2>Pm Narindra Modi</h2>
+            <img src="modi.png" alt="img" id="contentimg">
+            <br>
+            <p>As of my last update in January 2022, Narendra Modi was the Prime Minister of India. He has been serving
+                as the 14th Prime Minister of the country since May 2014. Modi is a member of the Bharatiya Janata Party
+                (BJP) and the Rashtriya Swayamsevak Sangh (RSS), a right-wing Hindu nationalist paramilitary volunteer
+                organization.
+                During his tenure, Modi's government implemented several</p>
+            <br>
+            <h3>Ask Questions People:</h3>
+            <br>
+            <details>
+                <summary>When and where was Prime Minister Modi born?</summary>
+                <p>Narendra Modi, in full Narendra Damodardas Modi, (born September 17, 1950, Vadnagar, India), Indian
+                    politician and government official who rose to become a senior leader of the Bharatiya Janata Party
+                    (BJP). In 2014 he led his party to victory in elections to the Lok Sabha (lower chamber of the
+                    Indian parliament), after which he was sworn in as prime minister of India. Prior to that he had
+                    served (2001–14) as chief minister (head of government) of Gujarat state in western India.</p>
+            </details>
+            <details>
+                <summary>What is Full Mame Of Modi?</summary>
+                <p>Narendra Damodardas Modi.</p>
+            </details>
+            <br>
+            <details>
+                <summary>Pm modi mother name?</summary>
+                <p>Indian Prime Minister Narendra Modi's mother Heeraben Modi has been cremated after she died in the
+                    early hours of the morning. She was 99 years old, and had been in hospital in western Gujarat state
+                    - where she lived - since Wednesday after her health deteriorated.</p>
+            </details>
+            <div class="logo1">
+                <img id="logo" src="insta.png" alt="logo">
+                <a href="https://www.instagram.com/narendramodi/feed/?hl=en" target="_blank">Go to instagram </a>
+            </div>
+            <div class="logo2">
+                <img id="logoimg" src="twitter.jpg" alt="logo">
+                <a href="https://x.com/narendramodi?s=20" target="_blank">Go to twitter</a>
+            </div>
+            <div class="logo2">
+                <img id="logoimg" src="wikilogo.png" alt="logo">
+                <a href="https://en.wikipedia.org/wiki/Narendra_Modi" target="_blank">Check Wikipedia</a>
+            </div>
+            <div class="address">
+                <h3>CONTACT DETAILS</h3>
+                <p class="add">
+                    South Block, Raisina Hill
+                    New Delhi-110011
+                    <br>
+                    Phone No:+91-11-23012312
+                    <br>
+                    Fax:+91-11-23019545,23016857
+                </p>
+                <span class="contactemail">Email: connect@mygov.nic.in</span>
+                <br>
+                <span class="contactemail">Email: narendramodi1234@gmail.com</span>
+            </div>
+        </div>
+        <div class="box1">
+            <h2>Pm Narindra Modi</h2>
+            <img src="modi.png" alt="img" id="contentimg">
+            <br>
+            <p>As of my last update in January 2022, Narendra Modi was the Prime Minister of India. He has been serving
+                as the 14th Prime Minister of the country since May 2014. Modi is a member of the Bharatiya Janata Party
+                (BJP) and the Rashtriya Swayamsevak Sangh (RSS), a right-wing Hindu nationalist paramilitary volunteer
+                organization.
+                During his tenure, Modi's government implemented several</p>
+            <br>
+            <h3>Ask Questions People:</h3>
+            <br>
+            <details>
+                <summary>When and where was Prime Minister Modi born?</summary>
+                <p>Narendra Modi, in full Narendra Damodardas Modi, (born September 17, 1950, Vadnagar, India), Indian
+                    politician and government official who rose to become a senior leader of the Bharatiya Janata Party
+                    (BJP). In 2014 he led his party to victory in elections to the Lok Sabha (lower chamber of the
+                    Indian parliament), after which he was sworn in as prime minister of India. Prior to that he had
+                    served (2001–14) as chief minister (head of government) of Gujarat state in western India.</p>
+            </details>
+            <details>
+                <summary>What is Full Mame Of Modi?</summary>
+                <p>Narendra Damodardas Modi.</p>
+            </details>
+            <br>
+            <details>
+                <summary>Pm modi mother name?</summary>
+                <p>Indian Prime Minister Narendra Modi's mother Heeraben Modi has been cremated after she died in the
+                    early hours of the morning. She was 99 years old, and had been in hospital in western Gujarat state
+                    - where she lived - since Wednesday after her health deteriorated.</p>
+            </details>
+            <div class="logo1">
+                <img id="logo" src="insta.png" alt="logo">
+                <a href="https://www.instagram.com/narendramodi/feed/?hl=en" target="_blank">Go to instagram </a>
+            </div>
+            <div class="logo2">
+                <img id="logoimg" src="twitter.jpg" alt="logo">
+                <a href="https://x.com/narendramodi?s=20" target="_blank">Go to twitter</a>
+            </div>
+            <div class="logo2">
+                <img id="logoimg" src="wikilogo.png" alt="logo">
+                <a href="https://en.wikipedia.org/wiki/Narendra_Modi" target="_blank">Check Wikipedia</a>
+            </div>
+            <div class="address">
+                <h3>CONTACT DETAILS</h3>
+                <p class="add">
+                    South Block, Raisina Hill
+                    New Delhi-110011
+                    <br>
+                    Phone No:+91-11-23012312
+                    <br>
+                    Fax:+91-11-23019545,23016857
+                </p>
+                <span class="contactemail">Email: connect@mygov.nic.in</span>
+                <br>
+                <span class="contactemail">Email: narendramodi1234@gmail.com</span>
+            </div>
+        </div>
+        <div class="box1">
+            <h2>Pm Narindra Modi</h2>
+            <img src="modi.png" alt="img" id="contentimg">
+            <br>
+            <p>As of my last update in January 2022, Narendra Modi was the Prime Minister of India. He has been serving
+                as the 14th Prime Minister of the country since May 2014. Modi is a member of the Bharatiya Janata Party
+                (BJP) and the Rashtriya Swayamsevak Sangh (RSS), a right-wing Hindu nationalist paramilitary volunteer
+                organization.
+                During his tenure, Modi's government implemented several</p>
+            <br>
+            <h3>Ask Questions People:</h3>
+            <br>
+            <details>
+                <summary>When and where was Prime Minister Modi born?</summary>
+                <p>Narendra Modi, in full Narendra Damodardas Modi, (born September 17, 1950, Vadnagar, India), Indian
+                    politician and government official who rose to become a senior leader of the Bharatiya Janata Party
+                    (BJP). In 2014 he led his party to victory in elections to the Lok Sabha (lower chamber of the
+                    Indian parliament), after which he was sworn in as prime minister of India. Prior to that he had
+                    served (2001–14) as chief minister (head of government) of Gujarat state in western India.</p>
+            </details>
+            <details>
+                <summary>What is Full Mame Of Modi?</summary>
+                <p>Narendra Damodardas Modi.</p>
+            </details>
+            <br>
+            <details>
+                <summary>Pm modi mother name?</summary>
+                <p>Indian Prime Minister Narendra Modi's mother Heeraben Modi has been cremated after she died in the
+                    early hours of the morning. She was 99 years old, and had been in hospital in western Gujarat state
+                    - where she lived - since Wednesday after her health deteriorated.</p>
+            </details>
+            <div class="logo1">
+                <img id="logo" src="insta.png" alt="logo">
+                <a href="https://www.instagram.com/narendramodi/feed/?hl=en" target="_blank">Go to instagram </a>
+            </div>
+            <div class="logo2">
+                <img id="logoimg" src="twitter.jpg" alt="logo">
+                <a href="https://x.com/narendramodi?s=20" target="_blank">Go to twitter</a>
+            </div>
+            <div class="logo2">
+                <img id="logoimg" src="wikilogo.png" alt="logo">
+                <a href="https://en.wikipedia.org/wiki/Narendra_Modi" target="_blank">Check Wikipedia</a>
+            </div>
+            <div class="address">
+                <h3>CONTACT DETAILS</h3>
+                <p class="add">
+                    South Block, Raisina Hill
+                    New Delhi-110011
+                    <br>
+                    Phone No:+91-11-23012312
+                    <br>
+                    Fax:+91-11-23019545,23016857
+                </p>
+                <span class="contactemail">Email: connect@mygov.nic.in</span>
+                <br>
+                <span class="contactemail">Email: narendramodi1234@gmail.com</span>
+            </div>
+        </div>
+
+    </section>
+    <footer class="footweb">
+        <div class="content">
+            <div class="left box">
+                <div class="upper">
+                    <div class="topic">About us</div>
+                    <p>CodingLab is a channel where you can learn HTML,
+                        CSS, and also JavaScript along with creative CSS Animations and Effects.</p>
+                </div>
+                <div class="lower">
+                    <div class="topic">Contact us</div>
+                    <div class="phone">
+                        <a href="#"><i class="fas fa-phone-volume"></i>+91 8725877158</a>
+                    </div>
+                    <div class="email">
+                        <a href="#"><i class="fas fa-envelope"></i>rahulpangotra77158@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+            <div class="middle box">
+                <div class="topic">Our Services</div>
+                <div><a href="#">Web Design, Development</a></div>
+                <div><a href="#">Web UX Design, Reasearch</a></div>
+                <div><a href="#">Web User Interface Design</a></div>
+                <div><a href="#">Theme Development, Design</a></div>
+                <div><a href="#">Mobile Application Design</a></div>
+                <div><a href="#">Wire raming & Prototyping</a></div>
+            </div>
+            <div class="right box">
+                <div class="topic">Subscribe us</div>
+                <form action="#">
+                    <input type="text" placeholder="Enter email address">
+                    <input type="submit" name="" value="Send">
+                    <div class="media-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="bottom">
+            <p>Copyright © 2023 <a href="#">CodingLab</a> All rights reserved</p>
+        </div>
+    </footer>
+</body>
+
+</html>
